@@ -17,7 +17,7 @@ function Tabs() {
         name="HomeScreen"
         component={HomeScreen}
         options={{
-          headerTitle: 'Home',
+          headerTitle: 'HOME | Get Random Jokes',
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
