@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -15,7 +16,13 @@ function Tabs() {
       <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{headerTitle: 'Home'}}
+        options={{
+          headerTitle: 'Home',
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
       />
     </Tab.Navigator>
   );
