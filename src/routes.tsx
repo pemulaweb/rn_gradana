@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Import Screens
 import HomeScreen from './screens/HomeScreen';
+import LocationScreen from './screens/LocationScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,6 +22,17 @@ function Tabs() {
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="LocationScreen"
+        component={LocationScreen}
+        options={{
+          headerTitle: 'Location',
+          tabBarLabel: 'Location',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="google-maps" color={color} size={size} />
           ),
         }}
       />
