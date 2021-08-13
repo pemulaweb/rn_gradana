@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Import Screens
 import HomeScreen from './screens/HomeScreen';
+import CameraScreen from './screens/CameraScreen';
 import LocationScreen from './screens/LocationScreen';
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,17 @@ function Tabs() {
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="CameraScreen"
+        component={CameraScreen}
+        options={{
+          headerTitle: 'Camera',
+          tabBarLabel: 'Camera',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="camera" color={color} size={size} />
           ),
         }}
       />
