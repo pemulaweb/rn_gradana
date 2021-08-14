@@ -8,6 +8,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import CameraScreen from './screens/CameraScreen';
 import LocationScreen from './screens/LocationScreen';
+import FormScreen from './screens/FormScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -45,6 +46,17 @@ function Tabs() {
           tabBarLabel: 'Location',
           tabBarIcon: ({color, size}) => (
             <Icon name="google-maps" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="FormScreen"
+        component={FormScreen}
+        options={{
+          headerTitle: 'Form Wilayah',
+          tabBarLabel: 'Form Wilayah',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="form-select" color={color} size={size} />
           ),
         }}
       />
