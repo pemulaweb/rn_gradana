@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {Text, List, Button} from 'react-native-paper';
+import {Text, List, Button, Subheading} from 'react-native-paper';
 import useLocation from '../hooks/useLocation';
 
 export default function LocationScreen() {
@@ -17,6 +17,7 @@ export default function LocationScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Subheading>Please make sure you have activate your Location</Subheading>
       <List.Section>
         <List.Subheader>Your Current Location</List.Subheader>
         <List.Item title={`Latitude: ${location?.coords?.latitude}`} />
